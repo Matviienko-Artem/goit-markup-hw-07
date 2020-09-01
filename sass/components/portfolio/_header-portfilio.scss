@@ -1,0 +1,75 @@
+.logo {
+  margin-right: 85px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: $accent-color;
+  text-decoration: none;
+}
+.logoword {
+  color: $full-dark-color;
+}
+
+.navigation {
+  position: relative;
+  height: 80px;
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  list-style-type: none;
+}
+
+.navigation-navigation {
+  margin-right: auto;
+}
+
+.navigation-menu:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 4px;
+  width: 78px;
+
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+
+.navigation-menu:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-item {
+  text-decoration: none;
+  color: $dark-color;
+
+  transition: $standart-animation;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+nav ~ a.navigation-item {
+  color: $gray-color;
+}
+
+.icon-envelope,
+.icon-smartphone {
+  fill: currentColor;
+  margin-right: 10px;
+}

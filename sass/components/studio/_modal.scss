@@ -105,7 +105,10 @@
 }
 
 .form-label-accept {
-  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -114,6 +117,30 @@
 
   color: $gray-color;
 }
+
+.checkbox {
+  appearance: none;
+}
+
+.icon-checkbox {
+  display: inline-block;
+  height: 15px;
+  width: 16px;
+  margin-right: 8px;
+
+  border: 2px solid $dark-color;
+  border-radius: 4px;
+  transition: $standart-animation;
+}
+
+.checkbox:checked + .icon-checkbox {
+  border-color: $accent-color;
+  background-color: $accent-color;
+  background-image: url(/images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
 .terms {
   color: $accent-color;
 }

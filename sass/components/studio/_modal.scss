@@ -5,9 +5,8 @@
 
   display: flex;
   justify-content: center;
-  width: 528px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  width: 450px;
+  padding: 40px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: $standart-animation;
@@ -16,6 +15,10 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
 }
 
 .form-title {
@@ -33,7 +36,7 @@
 }
 
 .form-field {
-  width: 448px;
+  width: 100%;
   position: relative;
   margin-bottom: 28px;
 }
@@ -107,15 +110,20 @@
 .form-label-accept {
   display: flex;
   align-items: center;
-  margin-left: 12px;
 
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
 
   color: $gray-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    margin-left: 12px;
+  }
 }
 
 .checkbox {
@@ -224,11 +232,11 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: $white-color;
-}
 
-.button-close:hover,
-.button-close:focus {
-  color: $accent-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 
 .icon-close {

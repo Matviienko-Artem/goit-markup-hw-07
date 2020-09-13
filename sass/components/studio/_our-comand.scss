@@ -1,21 +1,22 @@
 .our-cmnd {
-  margin-top: 94px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background: $features-background-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-.our-cmnd-title {
-  margin: 0;
-
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: $dark-color;
+.our-cmnd-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team-list,
@@ -26,17 +27,34 @@
 .team-list {
   padding-left: 0;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 30px;
   padding-bottom: 30px;
 
   background: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
 
-.team-list:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    margin-top: 50px;
+  }
+
+  &:nth-child(2n + 1) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .team-img {

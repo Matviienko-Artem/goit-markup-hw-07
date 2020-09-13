@@ -3,45 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main-portfolio.min.css" />
+    <link rel="stylesheet" href="./css/main_mobile_portfolio.min.css" />
     <title>Portfolio</title>
   </head>
   <body>
     <header>
       <div class="container flexbox">
         <a href="./" class="logo">Web <span class="logoword">Studio</span></a>
-        <nav class="navigation-navigation">
-          <ul class="navigation flexbox">
-            <li class="navigation-menu">
-              <a href="index.html" class="navigation-item">Студия</a>
-            </li>
-            <li class="navigation-menu">
-              <a href="portfolio.html" class="navigation-item">Портфолио</a>
-            </li>
-            <li class="navigation-menu">
-              <a href="#" class="navigation-item">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="mailto:info@devstudio.com" class="navigation-item">
-          <svg class="icon-envelope" width="16" height="12">
-            <use href="./images/symbol-defs.svg#icon-envelope"></use>
-          </svg>
-          info@devstudio.com</a
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
         >
-        <a href="tel:+380961111111" class="navigation-item">
-          <svg class="icon-smartphone" width="10" height="16">
-            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-menu"
+              href="./images/symbol-defs.svg#icon-menu_mobile"
+            ></use>
+            <use
+              class="icon-close"
+              href="./images/symbol-defs.svg#icon-close_mobile"
+            ></use>
           </svg>
-          +38 096 111 11 11</a
-        >
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <div class="navigation-container">
+            <nav>
+              <ul class="navigation">
+                <li class="navigation-menu">
+                  <a href="index.html" class="navigation-item">Студия</a>
+                </li>
+                <li class="navigation-menu">
+                  <a href="portfolio.html" class="navigation-item">Портфолио</a>
+                </li>
+                <li class="navigation-menu">
+                  <a href="#" class="navigation-item">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="contacts-container">
+            <a href="mailto:info@devstudio.com" class="navigation-item">
+              <svg class="icon-envelope" width="16" height="12">
+                <use href="./images/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+            <a href="tel:+380961111111" class="navigation-item">
+              <svg class="icon-smartphone" width="10" height="16">
+                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <h1 hidden>Портфолио</h1>
       <section>
         <div class="container">
-          <ul class="button-list flexbox">
+          <ul class="button-list">
             <li class="button-item">
               <button type="buton" class="button">Все</button>
             </li>
@@ -223,61 +251,71 @@
     </main>
     <footer>
       <div class="container footer-content">
-        <section>
-          <h3 class="logo-footer">
-            Web <span class="logoword-white">Studio</span>
-          </h3>
-          <address>
-            <ul class="address">
-              <li class="address-item">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="address-item">info@example.com</li>
-              <li class="address-item">+38 099 111 11 11</li>
+        <div class="special-footer-container">
+          <section class="footer-section-address">
+            <h3 class="logo-footer">
+              Web <span class="logoword-white">Studio</span>
+            </h3>
+            <address>
+              <ul class="address">
+                <li class="address-item">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="address-item">info@example.com</li>
+                <li class="address-item">+38 099 111 11 11</li>
+              </ul>
+            </address>
+          </section>
+          <section class="footer-section-join">
+            <h3 class="invite spacial-invite">Присоединяйтесь</h3>
+            <ul class="invite-list">
+              <li class="link">
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  class="invite-item invite-instagram"
+                ></a>
+              </li>
+              <li class="link">
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  class="invite-item invite-twitter"
+                ></a>
+              </li>
+              <li class="link">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="invite-item invite-facebook"
+                ></a>
+              </li>
+              <li class="link">
+                <a
+                  href="#"
+                  aria-label="Linkedin"
+                  class="invite-item invite-linkedin"
+                ></a>
+              </li>
             </ul>
-          </address>
-        </section>
-        <section>
-          <h3 class="invite">Присоединяйтесь</h3>
-          <ul class="invite-list">
-            <li class="link">
-              <a
-                href="#"
-                aria-label="Instagram"
-                class="invite-item invite-instagram"
-              ></a>
-            </li>
-            <li class="link">
-              <a
-                href="#"
-                aria-label="Twitter"
-                class="invite-item invite-twitter"
-              ></a>
-            </li>
-            <li class="link">
-              <a
-                href="#"
-                aria-label="Facebook"
-                class="invite-item invite-facebook"
-              ></a>
-            </li>
-            <li class="link">
-              <a
-                href="#"
-                aria-label="Linkedin"
-                class="invite-item invite-linkedin"
-              ></a>
-            </li>
-          </ul>
-        </section>
+          </section>
+        </div>
         <section>
           <h3 class="invite">Подпишитесь на рассылку</h3>
-          <div>
-            <input type="email" class="mail-subscrible" name="mail" id="" placeholder="E-mail">
-            <button class="button-subscribe">
+          <div class="mail-container">
+            <input
+              type="email"
+              class="mail-subscrible"
+              name="mail"
+              id=""
+              placeholder="E-mail"
+            />
+            <button type="button" class="button-subscribe">
               <span class="button-subscribe-icon">Подписаться</span>
-            </button> 
+            </button>
           </div>
         </section>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
